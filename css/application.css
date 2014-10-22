@@ -5,15 +5,18 @@
 body {
     margin: 0;
     /* TODO use the Google Font 'Bitter' */
+	font-family: 'Bitter', serif;
     font-size: 100%;
 }
 
 div, h1, h2, h3, h4, h5, h6, p, ul, ol, a {
     /* TODO because we are using Foundation, we have to override Foundation's default font family. Use the Google Font 'Bitter' here. */
+	font-family: 'Bitter', serif;
 }
 
 h1, h2, h3, h4, h5, h6 {
     /* TODO make the font color of all our headers #fffdf0 */
+	font-color: #fffdf0;
 }
 
 /* ---------------------------------------------- */
@@ -24,22 +27,35 @@ header {}
 
 header h1 {
     /* TODO make the font size larger than Foundation's default; I uesd 4.5em */
+	font-size: 4.5em;
     /* TODO add a text-shadow on the h1 using rgba(34, 28, 18,.75) */
+	text-shadow: rgba(34, 28, 18,.75);
+	color: #fff !important;
 }
 
 header .tagline h4 {
+	color: #fff !important;
     /* TODO make the tagline italic; you'll have to work hard to override Foundation's font-style: normal on all headers! */
+	font-style: italic !important;
     /* TODO add the same text-shadow */
+	text-shadow: rgba(34, 28, 18,.75);
 }
 
 header .tagline {
     /* TODO center the text */
+	
+	text-align: center;
     background: rgba(34, 28, 18,.5); /* I added this transparent background bar for you. */
     /* TODO add some padding to give it space around the text */
+	padding: 5px;
     /* TODO absolutely position the tagline bar at top: 35%. add a width so that it goes all the way across. */
+	top: 35%;
+	width: 100%;
     /* TODO when you make the slideshow work, the tagline will get hidden. why? what line of CSS do you have to write to make it appear ABOVE the slideshow? */
+	z-index: 100;
+	position: absolute;
+	
 }
-
 
 
 
@@ -60,6 +76,10 @@ section {
 
 .address {
     /* TODO give this section a background of #221c12 and a color of #fffdf0. make the text centered */
+	color: #fffdf0;
+	background-color: #221c12;
+	text-align: center;
+
 }
 
 .location,
@@ -78,6 +98,9 @@ section {
 
 .menu {
     /* TODO give this section a color of #221c12 and a background of #fffdf0. give it some bottom padding so there's space below the text. */
+	color: #221c12;
+	background-color: #fffdf0;
+	padding: 5px;
 }
 
 .menu h2 {
@@ -86,6 +109,7 @@ section {
 
 .menu h2, .menu h3, .menu h4 {
     /* TODO give these headers a color of #221c12 */
+	color: #221c12;
 }
 
 
@@ -126,6 +150,7 @@ section {
 /* ---------------------------------------------- */
 
 .contact {
+background-color: #221c12;
     /* TODO add the dark brown background color, and the background image symbols-bottom. Change the background-position so that the bottom of it shows (where the symbols start to fade out). */
     /* TODO add some top and bottom padding so that the content doesn't overlap the background image. Note how the padding changes the location of the background image. */
 }
