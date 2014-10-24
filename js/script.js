@@ -66,13 +66,13 @@ $(function() {
 
 
     // TODO #3 Create a function, populateMenu, to add a menu to the DOM
-/*
+
     function populateMenu( json ) {
       html = '';
 
       // start a for loop that iterates through json.length
       // add json.length into this for loop code
-      for( var i = 0; i < ; i++ ){
+      for( var i = 0; i < json.length; i++ ){
         // wrap each section in a menu-group div
         html += '<div class="menu-group columns small-12 medium-4">';
         // append inside the menu-group div a h4 with the json section name in it
