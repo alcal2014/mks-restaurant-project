@@ -16,22 +16,24 @@ $(function() {
     // I've given all of the anchors the same class so that I can easily target
     // all of them with jQuery
 
-    $( document ).on( 'click', '.menu-section-item', function( event ) {
+    $( document ).on( 'click', '.menu-section', function( event ) {
+	
       // Prevent the default action of the event
       event.preventDefault();
 
       // Assign the id of the clicked element (this) to a variable named id
-      var  = $( this );
-
+      var mymenuitem = $( this ).attr('id');
+		console.log(mymenuitem);
       // Remove the class 'is-active' from all menu item headings
-      $( '' ).removeClass( '' );
+      $( '.menu-section' ).removeClass( 'active' );
 
       // Add 'is-active' to this specific action that was clicked (this). is-active
       // provides the visual cue for what's active via CSS
-      $( this ).addClass( '' );
+      $( this ).addClass( 'active' );
 
       // Once you're started with TODO #2, call the getMenu function here,
       // passing id as the argument
+	  getMenu(mymenuitem);
 
     });
 
@@ -53,7 +55,8 @@ $(function() {
     function getMenu( course ) {
      // Use `$.getJSON` to get the menu for whatever menu heading was clicked
      $.getJSON( './json/menu-' + course + '.json', function( json ) {
-       populateMenu( json );
+       //populateMenu( json );
+	   conslole.log(json);
        // Once you're started with TODO #3, call the populateMenu function here
        // and pass json as the argument
      });
@@ -63,7 +66,7 @@ $(function() {
 
 
     // TODO #3 Create a function, populateMenu, to add a menu to the DOM
-
+/*
     function populateMenu( json ) {
       html = '';
 
@@ -101,5 +104,5 @@ $(function() {
 
     // TODO #4 Call getMenu with a menu of your choice and set that menu's
     // header to active so that a menu is loaded with the page by default
-
+*/
 });
